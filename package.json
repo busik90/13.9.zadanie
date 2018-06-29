@@ -1,0 +1,25 @@
+{
+  "name": "13.9.zadanie",
+  "version": "1.0.0",
+  "description": "PROJEKT: Strona do uploadowania plików/obrazków",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pawelbus/13.9.zadanie.git"
+  },
+  "keywords": [
+    "node",
+    "fs_module",
+    "http_module"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pawelbus/13.9.zadanie/issues"
+  },
+  "homepage": "https://github.com/pawelbus/13.9.zadanie#readme"
+}
