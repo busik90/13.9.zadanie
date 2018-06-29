@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/pawelbus/13.9.zadanie/issues"
   },
-  "homepage": "https://github.com/pawelbus/13.9.zadanie#readme"
+  "homepage": "https://github.com/pawelbus/13.9.zadanie#readme",
+  "dependencies": {
+    "colors": "^1.3.0"
+  }
 }
