@@ -1,7 +1,12 @@
+var fs = require('fs');
+
 exports.welcome = function(request, response) {
   console.log('Rozpoczynam obsługę żądania welcome.\n'.green);
-  response.write('Witaj na stronie startowej!');
-  response.end();
+  fs.readFile('./templates/start.html', function(err, html) {
+    response.writeHead(200, {'Content-type': 'text/html; charset=utf-8'});
+    response.write(html);
+    response.end();
+  });
 }
 
 exports.upload = function(request, response) {
