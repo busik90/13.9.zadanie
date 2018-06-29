@@ -3,11 +3,22 @@ var fs = require('fs'),
 
 exports.welcome = function(request, response) {
   console.log('Rozpoczynam obsługę żądania welcome.\n'.green);
-  fs.readFile('./templates/start.html', function(err, html) {
-    response.writeHead(200, {'Content-type': 'text/html; charset=utf-8'});
-    response.write(html);
-    response.end();
-  });
+
+  switch (request.url) {
+    case '/style.css':
+      fs.readFile('./templates/style.css', 'utf-8', function(err, css) {
+        response.writeHead(200, {'Content-type': 'text/css; charset=utf-8'});
+        response.write(css);
+        response.end();
+      });
+      break;
+    default :
+      fs.readFile('./templates/start.html', function(err, html) {
+        response.writeHead(200, {'Content-type': 'text/html; charset=utf-8'});
+        response.write(html);
+        response.end();
+      });
+  }
 }
 
 exports.upload = function(request, response) {
