@@ -30,10 +30,11 @@ exports.upload = function(request, response) {
     fileName = fields.title + '.png';
 
     fs.renameSync(files.upload.path, fileName);
-    response.writeHead(200, {'Content-Type': 'text/html'});
-    response.write('image ' + fileName + ':<br/>');
-    response.write('<img src="/show" />');
-    response.end();
+    fs.readFile('./templates/upload.html', function(err, html) {
+      response.writeHead(200, {'Content-Type': 'text/html charset=utf-8'});
+      response.write(html);      
+      response.end();
+    });
 
     console.log(fileName);
   });

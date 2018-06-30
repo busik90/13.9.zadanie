@@ -75,3 +75,11 @@ form {
 
   align-self: center;
 }
+
+img {
+  max-width: calc(100vw - 40px);
+  height: auto;
+  margin-bottom: 30px;
+  border: 2px solid white;
+  border-radius: 25px;
+}
