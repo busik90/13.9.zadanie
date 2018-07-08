@@ -72,6 +72,7 @@ form {
   background-color: rgba(46, 81, 255, 0.864);
   border: none;
   border-radius: 5px;
+  cursor: pointer;
 
   align-self: center;
 }
